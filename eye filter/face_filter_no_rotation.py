@@ -85,7 +85,7 @@ def findFace(cap):
             img=overlay(image,right_eye,face_landmarks,mp_face_mesh.FACEMESH_RIGHT_EYE)
             final_img=overlay(img,left_eye,face_landmarks,mp_face_mesh.FACEMESH_LEFT_EYE)
           
-        cv2.imshow('MediaPipe Face Mesh', cv2.flip(final_img, 1))
+        cv2.imshow('eye filter', cv2.flip(final_img, 1))
         if cv2.waitKey(5) & 0xFF == ord('q'):
           break
       cap.release()
